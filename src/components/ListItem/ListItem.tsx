@@ -3,11 +3,11 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 
 /* APPLICATION */
-import edit from "../assets/icons/edit.svg";
-import remove from "../assets/icons/remove.svg";
-import { selectAllCategories } from "../utils/slices/categoriesSlice";
-import { ModalEditItem } from "../views/Modal/ModalEditItem";
-import { ModalRemoveItem } from "../views/Modal/ModalRemoveItem";
+import edit from "../../assets/Icons/edit.svg";
+import remove from "../../assets/Icons/remove.svg";
+import { selectAllCategories } from "../../utils/Slices/categoriesSlice";
+import { ModalEditItem } from "../../views/Modal/ModalEditItem";
+import { ModalRemoveItem } from "../../views/Modal/ModalRemoveItem";
 
 interface ListItemProps {
   item: {

@@ -45,7 +45,7 @@ html {
 }
 
 .list-item-col1-row1__category::before {
-  content: url("./assets/icons/folder.svg");
+  content: url("./assets/Icons/folder.svg");
   margin-right: 4px;
   position: relative;
   top: 3px;

@@ -10,8 +10,8 @@ import { ModalRow } from "../../components/modal/ModalElements/ModalRow";
 import { ModalInput } from "../../components/modal/ModalElements/ModalInput";
 import { ModalTextarea } from "../../components/modal/ModalElements/ModalTextarea";
 import { ModalFooter } from "../../components/modal/ModalElements/ModalFooter";
-import { tasksUpdated } from "../../utils/slices/tasksSlice";
-import { categoriesUpdated } from "../../utils/slices/categoriesSlice";
+import { tasksUpdated } from "../../utils/Slices/tasksSlice";
+import { categoriesUpdated } from "../../utils/Slices/categoriesSlice";
 
 interface ModalEditItemProps {
   item: {

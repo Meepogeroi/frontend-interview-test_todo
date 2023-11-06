@@ -1,4 +1,4 @@
-import important from "../../../assets/icons/important.svg";
+import important from "../../../assets/Icons/important.svg";
 import { useLocation } from "react-router-dom";
 
 interface ModalInputProps {
