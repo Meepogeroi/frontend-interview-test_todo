@@ -5,13 +5,13 @@ import { useLocation } from "react-router-dom";
 
 /* APPLICATION */
 import { Modal } from "./Modal";
-import { ModalHeader } from "./ModalHeader";
-import { ModalInput } from "./ModalInput";
-import { ModalRow } from "./ModalRow";
-import { ModalTextarea } from "./ModalTextarea";
-import { ModalFooter } from "./ModalFooter";
-import { tasksAdded } from "../features/tasksSlice";
-import { categoriesAdded } from "../features/categoriesSlice";
+import { ModalHeader } from "../../components/modal/ModalElements/ModalHeader";
+import { ModalInput } from "../../components/modal/ModalElements/ModalInput";
+import { ModalRow } from "../../components/modal/ModalElements/ModalRow";
+import { ModalTextarea } from "../../components/modal/ModalElements/ModalTextarea";
+import { ModalFooter } from "../../components/modal/ModalElements/ModalFooter";
+import { tasksAdded } from "../../utils/slices/tasksSlice";
+import { categoriesAdded } from "../../utils/slices/categoriesSlice";
 
 interface ModalCreateItemProps {
   active: boolean;

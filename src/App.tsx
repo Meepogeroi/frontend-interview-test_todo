@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 
 /* APPLICATION */
 import "./App.css";
-import { Header } from "./Header/Header";
-import { Tasks } from "./Lists/Tasks";
-import { Categories } from "./Lists/Categories";
+import { Header } from "./views/Header/Header";
+import { Tasks } from "./views/Tasks/Tasks";
+import { Categories } from "./views/Categories/Categories";
 
 function App() {
   return (

@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 
 /* APPLICATION */
-import { RootState } from "../app/store";
+import { RootState } from "../../store/store";
 
 export interface TasksState {
   id: string;

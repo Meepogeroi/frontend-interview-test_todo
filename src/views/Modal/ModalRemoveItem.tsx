@@ -4,11 +4,11 @@ import { useLocation } from "react-router-dom";
 
 /* APPLICATION */
 import { Modal } from "./Modal";
-import { ModalHeader } from "./ModalHeader";
-import { ModalText } from "./ModalText";
-import { ModalFooter } from "./ModalFooter";
-import { tasksRemoved, tasksClearedCategories } from "../features/tasksSlice";
-import { categoriesRemoved } from "../features/categoriesSlice";
+import { ModalHeader } from "../../components/modal/ModalElements/ModalHeader";
+import { ModalText } from "../../components/modal/ModalElements/ModalText";
+import { ModalFooter } from "../../components/modal/ModalElements/ModalFooter";
+import { tasksRemoved, tasksClearedCategories } from "../../utils/slices/tasksSlice";
+import { categoriesRemoved } from "../../utils/slices/categoriesSlice";
 
 interface ModalRemoveItemProps {
   item: {
