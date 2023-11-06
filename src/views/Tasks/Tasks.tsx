@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 
 /* APPLICATION */
 import { ListItem } from "../../components/ListItem/ListItem";
-import { selectAllTasks } from "../../utils/Slices/tasksSlice";
+import { TasksState, selectAllTasks } from "../../utils/Slices/tasksSlice";
 
 export const Tasks: React.FC = () => {
-  const tasks = useSelector(selectAllTasks);
+  const tasks: TasksState[] = useSelector(selectAllTasks);
 
   return (
     <ul>
-      {tasks.map((task) => (
+      {tasks.map((task: TasksState) => (
         <ListItem key={task.id} item={task} />
       ))}
     </ul>
