@@ -40,7 +40,7 @@ export const ModalCreateItem: React.FC<ModalCreateItemProps> = ({
       <ModalHeader
         clearState={clearState}
         setActive={setActive}
-        title={isCategories ? "Создание категории" : "Создание задачи"}
+        title={!isCategories ? "Создание задачи" : "Создание категории"}
       />
       {isCategories ? (
         <ModalInput name={name} setName={setName} size="large" />
@@ -64,19 +64,19 @@ export const ModalCreateItem: React.FC<ModalCreateItemProps> = ({
         onSubmit={
           name
             ? () => {
-                dispatch(
-                  isCategories
-                    ? categoriesAdded({ name, description })
-                    : tasksAdded({
-                        name,
-                        description,
-                        category: setSelected,
-                      })
-                );
-                clearState();
-                setActive(false);
-              }
-            : () => {}
+              dispatch(
+                isCategories
+                  ? categoriesAdded({ name, description })
+                  : tasksAdded({
+                    name,
+                    description,
+                    category: selected,
+                  })
+              );
+              clearState();
+              setActive(false);
+            }
+            : () => { }
         }
       />
     </Modal>

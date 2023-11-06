@@ -36,8 +36,14 @@ export const ModalEditItem: React.FC<ModalEditItemProps> = ({
     [selected, setSelected] = useState(item.category || ""),
     [description, setDescription] = useState(item.description);
 
+  function clearState() {
+    setName(item.name);
+    setDescription(item.description);
+    setSelected(item.category || "");
+  }
+
   return (
-    <Modal item={item} active={active} setActive={setActive}>
+    <Modal item={item} active={active} setActive={setActive} clearState={clearState}>
       <ModalHeader
         setActive={setActive}
         title={
@@ -60,6 +66,7 @@ export const ModalEditItem: React.FC<ModalEditItemProps> = ({
       />
       <ModalFooter
         setActive={setActive}
+        clearState={clearState}
         submitBtnText="Сохранить"
         size="large"
         onSubmit={() => {
@@ -67,11 +74,11 @@ export const ModalEditItem: React.FC<ModalEditItemProps> = ({
             isCategories
               ? categoriesUpdated({ id: item.id, name, description })
               : tasksUpdated({
-                  id: item.id,
-                  name,
-                  description,
-                  category: selected,
-                })
+                id: item.id,
+                name,
+                description,
+                category: selected,
+              })
           );
           setActive(false);
         }}

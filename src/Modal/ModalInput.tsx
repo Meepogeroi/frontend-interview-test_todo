@@ -1,4 +1,5 @@
 import important from "../icons/important.svg";
+import { useLocation } from "react-router-dom";
 
 interface ModalInputProps {
   name: string;
@@ -11,6 +12,9 @@ export const ModalInput: React.FC<ModalInputProps> = ({
   setName,
   size,
 }) => {
+  const { pathname } = useLocation(),
+    isCategories = pathname.includes("categories")
+
   return (
     <div
       className={
@@ -20,9 +24,10 @@ export const ModalInput: React.FC<ModalInputProps> = ({
       <input
         id="modalinput"
         className="modalinput"
-        placeholder="Введите имя задачи/категории"
+        placeholder={ !isCategories ? "Введите имя задачи" : "Введите имя категории" }
         value={name}
         onChange={(e) => setName(e.target.value)}
+        maxLength={20}
       />
       <img src={important} alt="important" className="modalinput-icon" />
       <label htmlFor="modalinput">Имя</label>
